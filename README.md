@@ -19,5 +19,12 @@ An intelligent system designed to classify fruits based on their ripeness levels
  <img width="956" height="494" alt="Screenshot 2026-01-21 020122" src="https://github.com/user-attachments/assets/1576043f-d687-4526-9b22-37810459741e" />
 
  
-![Uploading Screenshot 2026-01-21 020141.png…]()
+<img width="958" height="507" alt="Screenshot 2026-01-21 020141" src="https://github.com/user-attachments/assets/52c0a6ba-c815-442b-91cb-b8449760dca9" />
+
+<img width="944" height="503" alt="Screenshot 2026-01-21 020204" src="https://github.com/user-attachments/assets/a883c7d6-fafd-4d1f-9810-38f1fa108072" />
+
+
+<img width="950" height="511" alt="Screenshot 2026-01-21 020234" src="https://github.com/user-attachments/assets/f6dbcf93-6c09-4712-8d37-fdadc7d1aeae" />
+
+
 
