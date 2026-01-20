@@ -14,7 +14,7 @@ An intelligent system designed to classify fruits based on their ripeness levels
 - **Efficiency:** Improved inspection throughput by **65%** compared to manual processes.
 - **Accuracy:** Achieved over **92% classification accuracy** in testing environments.
 
- ** Here is The Screen Shot**
+ ** Here is The Screenshot**
 
  <img width="956" height="494" alt="Screenshot 2026-01-21 020122" src="https://github.com/user-attachments/assets/1576043f-d687-4526-9b22-37810459741e" />
 
