@@ -1,30 +1,141 @@
-# Fruit-Ripeness-Object-Detection-Using-Deep-Learning
-An AI-powered fruit ripeness classification system using CNN (MobileNetV2) and Django, designed to reduce food waste and automate quality control in the supply chain.
 
-An intelligent system designed to classify fruits based on their ripeness levels—Unripe, Ripe, and Overripe—using Deep Learning.
+# Fruit Ripeness Object Detection Using Deep Learning
 
-## 🚀 Key Features
-- **Deep Learning Model:** Built using **MobileNetV2 CNN** for high accuracy on edge devices.
-- **Multimodal Classification:** Supports Apples, Bananas, Grapes, and Oranges.
-- **Real-time API:** Integrated with **Django REST Framework** for seamless deployment.
-- **Data Augmentation:** Optimized for real-world scenarios including occluded and dense fruit targets.
+## Project Overview
 
-## 📊 Impact & Results
-- **Reduced Food Waste:** Automated inspection helps reduce waste by up to **40%**.
-- **Efficiency:** Improved inspection throughput by **65%** compared to manual processes.
-- **Accuracy:** Achieved over **92% classification accuracy** in testing environments.
+This project is a Deep Learning-based web application designed to detect and classify the ripeness of fruits using image classification.
 
- ** Here is The Screenshot**
+The system supports four types of fruits:
+- Apple
+- Banana
+- Lemon
+- Orange
 
- <img width="956" height="494" alt="Screenshot 2026-01-21 020122" src="https://github.com/user-attachments/assets/1576043f-d687-4526-9b22-37810459741e" />
+Each fruit is classified into three ripeness categories:
+- Ripe
+- Unripe
+- Overripe
 
- 
-<img width="958" height="507" alt="Screenshot 2026-01-21 020141" src="https://github.com/user-attachments/assets/52c0a6ba-c815-442b-91cb-b8449760dca9" />
+The application uses a trained MobileNetV2 model to predict fruit ripeness and provides a confidence score for each prediction.
 
-<img width="944" height="503" alt="Screenshot 2026-01-21 020204" src="https://github.com/user-attachments/assets/a883c7d6-fafd-4d1f-9810-38f1fa108072" />
+## Technologies Used
 
+### Backend Technologies
+- Python
+- Django
+- Django REST Framework (DRF)
+- SQLite
+- Django Token Authentication
 
-<img width="950" height="511" alt="Screenshot 2026-01-21 020234" src="https://github.com/user-attachments/assets/f6dbcf93-6c09-4712-8d37-fdadc7d1aeae" />
+### Deep Learning Technologies
+- PyTorch
+- Torchvision
+- MobileNetV2
+- Pillow (PIL)
 
+## Deep Learning Model
 
+**Model Architecture:** MobileNetV2
 
+**Deep Learning Framework:** PyTorch
+
+**Input Image Size:** 224 × 224
+
+**Number of Output Classes:** 12
+
+### Classification Categories
+
+| Ripeness Category | Fruit Types |
+|---|---|
+| Overripe | Apple, Banana, Lemon, Orange |
+| Ripe | Apple, Banana, Lemon, Orange |
+| Unripe | Apple, Banana, Lemon, Orange |
+
+## Backend Features
+
+- User Registration
+- User Login
+- Token-Based Authentication
+- User Management
+- Fruit Image Upload
+- Fruit Ripeness Prediction
+- Prediction Confidence Score
+- Save Prediction Records
+- Retrieve All Predictions
+- Retrieve Single Prediction
+- Delete Individual Prediction
+- Delete All Predictions
+- Prediction Count
+- Password Reset Email Functionality
+
+## Project Structure
+
+```text
+Back-End/
+└── Fruits_ripeness_object_detection_project/
+    └── myproject/
+        ├── accounts/
+        │   ├── migrations/
+        │   ├── models.py
+        │   ├── serializers.py
+        │   ├── views.py
+        │   └── urls.py
+        │
+        ├── prediction/
+        │   ├── migrations/
+        │   ├── models.py
+        │   ├── serializers.py
+        │   ├── views.py
+        │   └── urls.py
+        │
+        ├── myproject/
+        │   ├── settings.py
+        │   ├── urls.py
+        │   ├── asgi.py
+        │   └── wsgi.py
+        │
+        ├── model/
+        │   └── my-model.pt
+        │
+        └── manage.py
+```
+
+## API Development
+
+The backend uses Django REST Framework (DRF) to develop RESTful APIs for communication between the frontend and backend.
+
+### Main API Functionalities
+
+- User Authentication APIs
+- User Management APIs
+- Fruit Prediction API
+- Prediction History APIs
+- Prediction Deletion APIs
+- Prediction Count API
+
+## Model Prediction Workflow
+
+1. User uploads a fruit image.
+2. Django REST Framework receives the image through an API request.
+3. Pillow opens and converts the image into RGB format.
+4. Torchvision resizes the image to 224 × 224.
+5. The image is converted into a PyTorch tensor.
+6. MobileNetV2 predicts the fruit classification.
+7. Softmax calculates class probabilities.
+8. The highest probability determines the predicted class and confidence score.
+9. Prediction information is saved in the SQLite database.
+10. Django REST Framework returns the prediction result as a JSON response.
+
+## Database
+
+**SQLite** is used to store:
+- User information
+- Fruit prediction records
+- Image paths
+- Classification results
+- Confidence scores
+- Prediction timestamps
+
+## Backend Server
+
+The backend is developed using Django and Django REST Framework.
