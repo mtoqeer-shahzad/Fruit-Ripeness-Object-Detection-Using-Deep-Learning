@@ -5,12 +5,8 @@ from django.db import models
 class CustomUser(AbstractUser):
     email = models.EmailField(unique=True)
 
-    # Add any additional fields here
 
     def __str__(self):
         return self.username
 
 
-from django.db import models
-
-# Create your models here.
